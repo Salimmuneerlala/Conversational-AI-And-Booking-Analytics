@@ -12,7 +12,7 @@ It is designed to process chatbot interaction data and booking data to generate 
 
 ---
 
-## 🏗️ Architecture Diagram
+## Architecture Diagram
 
 The diagram below represents the **end-to-end data flow across all layers**, including ingestion, processing, storage, and serving.
 
@@ -20,20 +20,20 @@ The diagram below represents the **end-to-end data flow across all layers**, inc
 
 ---
 
-## ⚙️ Architecture Summary
+## Architecture Summary
 
 The pipeline is structured into the following layers:
 
 ---
 
-### 🔹 Data Source Layer
+### Data Source Layer
 
 * Azure SQL Database
 * Stores chatbot interaction data and booking data
 
 ---
 
-### 🔹 Ingestion Layer
+### Ingestion Layer
 
 * Azure Data Factory (ADF)
 * Performs **incremental data ingestion using watermark logic**
@@ -41,12 +41,12 @@ The pipeline is structured into the following layers:
 
 ---
 
-### 🔹 Storage Layer (Data Lake)
+### Storage Layer (Data Lake)
 
 * Azure Data Lake Storage Gen2
 * Organized using Medallion Architecture:
 
-#### 🥉 Bronze Layer
+#### Bronze Layer
 
 * Raw data stored in Parquet format
 * Append-only, no transformations
@@ -54,7 +54,7 @@ The pipeline is structured into the following layers:
 
 ---
 
-#### 🥈 Silver Layer
+#### Silver Layer
 
 * Data cleaning and transformation
 * Sessionization using PySpark window functions
@@ -63,7 +63,7 @@ The pipeline is structured into the following layers:
 
 ---
 
-#### 🥇 Gold Layer
+#### Gold Layer
 
 * Business-level aggregations
 * Funnel analysis (engagement → conversion)
@@ -72,7 +72,7 @@ The pipeline is structured into the following layers:
 
 ---
 
-### 🔹 Processing Layer
+### Processing Layer
 
 * Azure Databricks (PySpark)
 * Handles large-scale distributed data processing
@@ -80,16 +80,16 @@ The pipeline is structured into the following layers:
 
 ---
 
-### 🔹 Serving Layer
+### Serving Layer
 
 * Power BI / Analytics tools
 * Used for dashboards and reporting
 
 ---
 
-### 🔹 Additional Components
+### Additional Components
 
-#### 🔁 Orchestration
+#### Orchestration
 
 * ADF pipelines and triggers
 * Databricks jobs
