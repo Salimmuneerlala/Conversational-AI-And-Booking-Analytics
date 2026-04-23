@@ -1,0 +1,17 @@
+CREATE PROCEDURE sp_update_watermark 
+AS 
+BEGIN 
+    UPDATE watermark_table 
+    SET last_run_time = ( 
+        SELECT MAX(created) FROM chat_history 
+    ) 
+    WHERE table_name = 'chat_history'; 
+    
+    UPDATE watermark_table 
+    SET last_run_time = ( 
+        SELECT MAX(created) FROM booking 
+    ) 
+    WHERE table_name = 'booking'; 
+END; 
+
+ 

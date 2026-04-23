@@ -1,0 +1,22 @@
+CREATE TABLE booking (  
+booking_id VARCHAR(500) PRIMARY KEY,  
+lead_id VARCHAR(500),  
+user_id VARCHAR(500),  
+created DATETIME,  
+product_id VARCHAR(100),  
+variant_id VARCHAR(100),  
+variant_name VARCHAR(500),  
+dealer_id VARCHAR(500),  
+dealer_name VARCHAR(500),  
+dealer_city VARCHAR(500),  
+dealer_code VARCHAR(100),  
+dealer_state VARCHAR(100),  
+dealer_address VARCHAR(MAX),  
+dealer_street VARCHAR(200),  
+dealer_pincode VARCHAR(50),  
+customer_name VARCHAR(200),  
+mobile_number VARCHAR(100),  
+enquiry_type VARCHAR(100)  
+); 
+
+ 

@@ -1,0 +1,6 @@
+CREATE TABLE watermark_table ( 
+table_name VARCHAR(100), 
+last_run_time DATETIME 
+); 
+
+ 

@@ -1,0 +1,15 @@
+CREATE TABLE chat_history (  
+id VARCHAR(300) PRIMARY KEY,  
+user_id VARCHAR(500),  
+created DATETIME,  
+mobile_number VARCHAR(200),  
+person_name VARCHAR(200),  
+customer_response VARCHAR(MAX),  
+system_response VARCHAR(MAX),  
+from_whatsapp_number VARCHAR(200),  
+tag_1 VARCHAR(200),  
+tag_2 VARCHAR(200),  
+response_time FLOAT  
+); 
+
+ 
